@@ -36,11 +36,14 @@ Table of contents
    1. [Enable the API](https://developers.google.com/gmail/api/quickstart/python#enable_the_api)
       - Enable Gmail API if not already by clicking the blue button `Enable the API`
    2. [Authorize credentials for a desktop application](https://developers.google.com/gmail/api/quickstart/python#authorize_credentials_for_a_desktop_application)
-      1. Download the client secret. After that, run these commands:
-      2. `mkdir eaia/.secrets` - This will create a folder for secrets
-      3. `mv ${PATH-TO-CLIENT-SECRET.JSON} eaia/.secrets/secrets.json` - This will move the client secret you just created to that secrets folder
-      4. `python scripts/setup_gmail.py` - This will generate another file at `eaia/.secrets/token.json` for accessing Google services.
-4. Export LangSmith API key (`export LANGSMITH_API_KEY`)
+  
+> Note: If you're using a personal email (non-Google Workspace), select "External" as the User Type in the OAuth consent screen. With "External" selected, you must add your email as a test user in the Google Cloud Console under "OAuth consent screen" > "Test users" to avoid the "App has not completed verification" error. The "Internal" option only works for Google Workspace accounts.
+
+4. Download the client secret. After that, run these commands:
+5. `mkdir eaia/.secrets` - This will create a folder for secrets
+6. `mv ${PATH-TO-CLIENT-SECRET.JSON} eaia/.secrets/secrets.json` - This will move the client secret you just created to that secrets folder
+7. `python scripts/setup_gmail.py` - This will generate another file at `eaia/.secrets/token.json` for accessing Google services.
+8. Export LangSmith API key (`export LANGSMITH_API_KEY`)
 
 ### Configuration
 
